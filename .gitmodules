@@ -1,0 +1,3 @@
+[submodule "src/lame"]
+	path = src/lame
+	url = https://github.com/BestOwl/lame.git
