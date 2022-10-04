@@ -12,7 +12,7 @@ dependencies:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
 
-  dart_lame: ^1.0.0
+  dart_lame: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -46,6 +46,7 @@ flutter:
         ffiPlugin: true
       macos:
         ffiPlugin: true
+        dartPluginClass: FlutterLamePluginDarwin
       windows:
         ffiPlugin: true
 
