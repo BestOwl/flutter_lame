@@ -4,25 +4,48 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_lame'
-  s.version          = '0.0.1'
-  s.summary          = 'A new Flutter FFI plugin project.'
-  s.description      = <<-DESC
-A new Flutter FFI plugin project.
-                       DESC
+  s.version          = '1.0.0'
+  s.summary          = 'Flutter native bindlings to LAME (MP3 encoder).'
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'NightOwl' => 'midnightow1@outlook.com' }
+
+  s.prepare_command = <<-CMD
+    rsync -a --delete ../src/lame/ Classes
+  CMD
 
   # This will ensure the source files in Classes/ are included in the native
   # builds of apps using this FFI plugin. Podspec does not support relative
   # paths, so Classes contains a forwarder C file that relatively imports
   # `../src/*` so that the C sources can be shared among all target platforms.
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  s.source_files     = [
+    'Classes/libmp3lame/*.c',
+    'Classes/libmp3lame/vector/*.c',
+    'Classes/mpglib/*.c'
+  ]
   s.dependency 'Flutter'
   s.platform = :ios, '9.0'
 
   # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.pod_target_xcconfig = { 
+    'DEFINES_MODULE' => 'YES', 
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386',
+    'HEADER_SEARCH_PATHS' => [
+      '"${PODS_TARGET_SRCROOT}/Classes/include"',
+      '"${PODS_TARGET_SRCROOT}/Classes/"',
+      '"${PODS_TARGET_SRCROOT}/Classes/libmp3lame"',
+      '"${PODS_TARGET_SRCROOT}/Classes/mpglib"'
+    ],
+    'GCC_PREPROCESSOR_DEFINITIONS' => [
+      'HAVE_STDINT_H',
+      'HAVE_MPGLIB',
+      'DECODE_ON_THE_FLY',
+      'USE_FAST_LOG',
+      'TAKEHIRO_IEEE754_HACK',
+      'STDC_HEADERS',
+      'ieee754_float32_t=float'
+    ] 
+  }
   s.swift_version = '5.0'
 end

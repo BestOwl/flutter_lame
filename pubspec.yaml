@@ -42,6 +42,7 @@ flutter:
         ffiPlugin: true
       ios:
         ffiPlugin: true
+        dartPluginClass: FlutterLamePluginDarwin
       linux:
         ffiPlugin: true
       macos:
