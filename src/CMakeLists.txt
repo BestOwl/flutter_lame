@@ -5,13 +5,5 @@ cmake_minimum_required(VERSION 3.10)
 
 project(flutter_lame_library VERSION 0.0.1 LANGUAGES C)
 
-add_library(flutter_lame SHARED
-  "flutter_lame.c"
-)
-
-set_target_properties(flutter_lame PROPERTIES
-  PUBLIC_HEADER flutter_lame.h
-  OUTPUT_NAME "flutter_lame"
-)
-
-target_compile_definitions(flutter_lame PUBLIC DART_SHARED_LIB)
+add_subdirectory(lame)
+target_compile_definitions(mp3lame PUBLIC DART_SHARED_LIB)

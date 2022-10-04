@@ -1,7 +1,7 @@
 name: flutter_lame
 description: A new Flutter FFI plugin project.
-version: 0.0.1
-homepage:
+version: 1.0.0
+homepage: https://github.com/BestOwl/flutter_lame
 
 environment:
   sdk: '>=2.18.0 <3.0.0'
@@ -12,9 +12,9 @@ dependencies:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
 
+  dart_lame: ^1.0.0
+
 dev_dependencies:
-  ffi: ^1.2.1
-  ffigen: ^5.0.1
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
