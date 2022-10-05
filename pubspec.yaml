@@ -1,5 +1,5 @@
 name: flutter_lame
-description: A new Flutter FFI plugin project.
+description: Flutter native bindings to LAME (MP3 encoder), bundled with LAME source code.
 version: 1.0.0
 homepage: https://github.com/BestOwl/flutter_lame
 
