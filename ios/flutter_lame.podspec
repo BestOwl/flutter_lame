@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.name             = 'flutter_lame'
   s.version          = '1.0.0'
   s.summary          = 'Flutter native bindlings to LAME (MP3 encoder).'
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/BestOwl/flutter_lame'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'NightOwl' => 'midnightow1@outlook.com' }
 
