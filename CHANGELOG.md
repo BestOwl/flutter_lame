@@ -1,3 +1,5 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+- Initial release.
+- Provide `LameMp3Encoder` class
+- Bundle with `libmp3lame` library

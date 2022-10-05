@@ -1,0 +1,13 @@
+src/lame/ACM
+src/lame/debian
+src/lame/Dll
+src/lame/dshow
+src/lame/frontend
+src/lame/mac
+src/lame/mac/.DS_Store
+src/lame/macosx
+src/lame/misc
+src/lame/vc_solution
+
+src/lame/testcase.wav
+src/lame/testcase.mp3
