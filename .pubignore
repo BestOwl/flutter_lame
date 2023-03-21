@@ -1,6 +1,5 @@
 src/lame/ACM
 src/lame/debian
-src/lame/Dll
 src/lame/dshow
 src/lame/frontend
 src/lame/mac
