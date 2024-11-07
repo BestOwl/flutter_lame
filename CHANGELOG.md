@@ -9,3 +9,10 @@
 
 ## 1.0.2
 - Fix Windows build issue.
+
+## 1.0.3
+- Fix #5: add Android plugin namespace if required
+- Changed Android package id to `io.github.bestowl.flutter_lame`
+- example: apply Android plugin declaratively
+- example: update dependencies
+- Update SDK constraint to `>=2.18.0 <4.0.0` 
